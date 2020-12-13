@@ -7,7 +7,7 @@ const app=express()
 app.use(bodyParser.json())
 app.use(cors('*'))
 
-app.post('/emp', (request, response) => {
+app.get('/emp', (request, response) => {
   const { name, salary, age } = request.body
   const statement = `Select * from Emp`
     console.log(statement)
